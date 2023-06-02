@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Estudiantecontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home.Inicio');
 });
+
+Route::get('/Estudiante', [Estudiantecontroller::class, 'Estudiante'])->name('Estudiante.inicio');
+
