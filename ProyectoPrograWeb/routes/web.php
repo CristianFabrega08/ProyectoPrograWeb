@@ -19,4 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/Estudiante', [Estudiantecontroller::class, 'Estudiante'])->name('Estudiante.inicio');
+Route::get('/Profesor', [Estudiantecontroller::class, 'Profesor'])->name('Profesor.Inicio');
+Route::get('/Administrador', [Estudiantecontroller::class, 'Administrador'])->name('Administrador.Inicio');
 

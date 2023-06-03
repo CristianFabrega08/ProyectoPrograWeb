@@ -18,13 +18,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active text-white" href="{{route('Estudiante.inicio')}}">Alumno</a>
+                <a class="nav-link text-white" href="{{route('Estudiante.inicio')}}">Alumno</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Profesor</a>
+                <a class="nav-link text-white" href="{{route('Profesor.Inicio')}}">Profesor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Administrador</a>
+                <a class="nav-link text-white" href="{{route('Administrador.Inicio')}}">Administrador</a>
               </li>
               
             </ul>
