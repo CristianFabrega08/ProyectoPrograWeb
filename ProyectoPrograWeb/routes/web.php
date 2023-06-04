@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Estudiantecontroller;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('home.Inicio');
 });
 
-Route::get('/Estudiante', [Estudiantecontroller::class, 'Estudiante'])->name('Estudiante.inicio');
-Route::get('/Profesor', [Estudiantecontroller::class, 'Profesor'])->name('Profesor.Inicio');
-Route::get('/Administrador', [Estudiantecontroller::class, 'Administrador'])->name('Administrador.Inicio');
+Route::get('/Estudiante', [HomeController::class, 'Estudiante'])->name('Estudiante.inicio');
+Route::get('/Profesor', [HomeController::class, 'Profesor'])->name('Profesor.Inicio');
+Route::get('/Administrador', [HomeController::class, 'Administrador'])->name('Administrador.Inicio');
 

@@ -39,34 +39,21 @@
                     <table class="table table-striped table-hover">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Nombre Propuesta</th>
-                            <th scope="col">Estado de Propuesta</th>
+                            <th scope="col">nombre</th>
+                            <th scope="col">apellido</th>
+                            <th scope="col">correo</th>
+                            <th scope="col">rut</th>
+                            <th scope="col">Propuesta</th>
                           </tr>
                         </thead>
                         <tbody class="table-group-divider">
                           <tr>
-                            <th scope="row">1</th>
-                            <td>Nombre 1</td>
-                            <td>Apellido</td>
-                            <td>Propuesta 1</td>
-                            <td>Estado 1</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Nombre 2</td>
-                            <td>Apellido 2</td>
-                            <td>Propuesta 2</td>
-                            <td>Estado 2</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Nombre 3</td>
-                            <td>Apellido 3</td>
-                            <td>Propuesta 3</td>
-                            <td>Estado 3</td>
+                            <td class="align-middle">Nombre 1</td>
+                            <td class="align-middle">Apellido</td>
+                            <td class="align-middle">correo</td>
+                            <td class="align-middle">rut</td>
+                            <td class="align-middle"><a class="btn btn-sm btn-warning pb-0 text-white"><span class="material-symbols-outlined">download</span></td>
+                            
                           </tr>
                         </tbody>
                       </table>

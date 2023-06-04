@@ -8,23 +8,26 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('estudiantes', function (Blueprint $table) {
+        Schema::create('Estudiantes', function (Blueprint $table) {
             $table->primary('rut');
             $table->string('rut',10);
             $table->String('nombre',20);
             $table->String('apellido',20);
             $table->String('email',50);
+            $table->softDeletes();
         });
     }
 
     /**
      * Reverse the migrations.
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('estudiantes');
+        Schema::dropIfExists('Estudiante');
     }
 };
