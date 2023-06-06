@@ -26,7 +26,7 @@
                                 <td class="align-middle">Apellido</td>
                                 <td class="align-middle">Correo</td>
                                 <td class="align-middle">Rut</td>
-                                <td class="align-middle"><a class="btn btn-sm btn-warning pb-0 text-white"><span class="material-symbols-outlined">download</span></td>
+                                <td class="align-middle"><a class="btn btn-sm btn-warning pb-0 text-white"><span class="material-icons">download</span></td>
                                 <td class="align-middle">
                                     <div>
                                         <div class="form-check form-check-inline">
