@@ -22,3 +22,4 @@ Route::get('/Estudiante', [HomeController::class, 'Estudiante'])->name('Estudian
 Route::get('/Profesor', [HomeController::class, 'Profesor'])->name('Profesor.Inicio');
 Route::get('/Administrador', [HomeController::class, 'Administrador'])->name('Administrador.Inicio');
 
+

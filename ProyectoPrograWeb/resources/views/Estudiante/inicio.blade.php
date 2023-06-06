@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('Inicio')
-<div class="container-fluid bg-light">
+<div class="container-fluid " style="background:linear-gradient(top, #2460B2 20%, #24a09a 80%);">
     <h1 style="text-align: left" class="mt-2">Propuesta Tsi</h1>
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -39,21 +39,34 @@
                     <table class="table table-striped table-hover">
                         <thead>
                           <tr>
-                            <th scope="col">nombre</th>
-                            <th scope="col">apellido</th>
-                            <th scope="col">correo</th>
-                            <th scope="col">rut</th>
-                            <th scope="col">Propuesta</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Nombre Propuesta</th>
+                            <th scope="col">Estado de Propuesta</th>
                           </tr>
                         </thead>
                         <tbody class="table-group-divider">
                           <tr>
-                            <td class="align-middle">Nombre 1</td>
-                            <td class="align-middle">Apellido</td>
-                            <td class="align-middle">correo</td>
-                            <td class="align-middle">rut</td>
-                            <td class="align-middle"><a class="btn btn-sm btn-warning pb-0 text-white"><span class="material-symbols-outlined">download</span></td>
-                            
+                            <th scope="row">1</th>
+                            <td>Nombre 1</td>
+                            <td>Apellido</td>
+                            <td>Propuesta 1</td>
+                            <td>Estado 1</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Nombre 2</td>
+                            <td>Apellido 2</td>
+                            <td>Propuesta 2</td>
+                            <td>Estado 2</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Nombre 3</td>
+                            <td>Apellido 3</td>
+                            <td>Propuesta 3</td>
+                            <td>Estado 3</td>
                           </tr>
                         </tbody>
                       </table>
