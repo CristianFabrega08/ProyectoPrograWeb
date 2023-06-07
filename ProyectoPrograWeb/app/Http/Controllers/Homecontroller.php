@@ -13,13 +13,6 @@ class HomeController extends Controller
     #redireccionar a vista de usuario
 
 
-    public function Profesor(){
-        $Profesores = profesor::all();
-        return view('Profesor.Inicio',compact('Profesores'));
-    }
 
-    public function Administrador(){
-        return view('Administrador.Inicio');
-    }
 }
 

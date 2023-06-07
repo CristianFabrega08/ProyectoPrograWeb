@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\ProfesorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,11 @@ Route::get('/', function () {
 
 Route::get('/Estudiante', [EstudianteController::class, 'Estudiante'])->name('Estudiante.inicio');
 Route::post('/Estudiante',[EstudianteController::class,'store'])->name('Estudiante.store');
-Route::get('/Profesor', [HomeController::class, 'Profesor'])->name('Profesor.Inicio');
-Route::get('/Administrador', [HomeController::class, 'Administrador'])->name('Administrador.Inicio');
+
+Route::get('/Profesor', [ProfesorController::class,'Profesor'])->name('Profesor.Inicio');
+route::post('/Profesor',[ProfesorController::class,'store'])->name('Profesor.store');
+
+Route::get('/Administrador', [AdministradorController::class,'Administrador'])->name('Administrador.Inicio');
+route::post('/Administrador',[AdministradorController::class,'store'])->name('Administrador.store');
 
 

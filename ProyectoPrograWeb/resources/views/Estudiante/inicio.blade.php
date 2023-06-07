@@ -13,7 +13,7 @@
                 <form action="">
                     <select name="equipo" id="equipo" class="form-control">
                       @foreach ($Estudiantes as $index => $estudiantes)
-                        <option value="{{$estudiantes->rut}}">{{$estudiantes->rut}}</option>
+                        <option value="{{$estudiantes->id}}">{{$estudiantes->rut}}</option>
                       @endforeach
                     </select>
                     <h5 class="my-3">Sube el archivo en formato PDF</h5>
