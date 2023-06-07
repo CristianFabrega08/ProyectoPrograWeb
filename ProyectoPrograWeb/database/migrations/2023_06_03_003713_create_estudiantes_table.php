@@ -18,6 +18,7 @@ return new class extends Migration
             $table->String('nombre',20);
             $table->String('apellido',20);
             $table->String('email',50);
+            $table->timestamps();
             $table->softDeletes();
         });
     }

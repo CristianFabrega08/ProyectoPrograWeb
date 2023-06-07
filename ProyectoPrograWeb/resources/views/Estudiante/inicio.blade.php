@@ -11,12 +11,11 @@
             </div>
             <div class="card-body">
                 <form action="">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" class="form-control">
-                    <label for="propuesta">Nombre de la propuesta</label>
-                    <input type="text" id="propuesta" name="propuesta" class="form-control">
+                    <select name="equipo" id="equipo" class="form-control">
+                      @foreach ($Estudiantes as $index => $estudiantes)
+                        <option value="{{$estudiantes->rut}}">{{$estudiantes->rut}}</option>
+                      @endforeach
+                    </select>
                     <h5 class="my-3">Sube el archivo en formato PDF</h5>
                     <small>El archivo debe tener el nombre de la propuesta y de que trata</small>
                     <div class="form-group">

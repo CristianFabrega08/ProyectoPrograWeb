@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('profesor_rut');
             $table->date('fecha');
             $table->text('comentario');
+            $table->timestamps();
             $table->foreign('propuesta_id')->references('id')->on('propuestas');
             $table->foreign('profesor_rut')->references('rut')->on('profesores');
         });

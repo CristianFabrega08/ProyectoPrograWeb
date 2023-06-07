@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\estudiante;
+use App\Models\profesor;
 
 class HomeController extends Controller
 {
@@ -11,13 +11,13 @@ class HomeController extends Controller
         return view('home.Inicio');
     }
     #redireccionar a vista de usuario
-    public function Estudiante(){
-        #$Estudiantes = estudiante::all();
-        return view('Estudiante.inicio');
-    }
+
+
     public function Profesor(){
-        return view('Profesor.Inicio');
+        $Profesores = profesor::all();
+        return view('Profesor.Inicio',compact('Profesores'));
     }
+
     public function Administrador(){
         return view('Administrador.Inicio');
     }
