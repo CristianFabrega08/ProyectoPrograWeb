@@ -16,8 +16,8 @@
                                 <th scope="col">Apellido</th>
                                 <th scope="col">Correo</th>
                                 <th scope="col">Rut</th>
-                                <th scope="col">Propuesta</th>
-                                <th scope="col">Estado de Propuesta</th>
+                                <th scope="col">Comentarios</th>
+                                <th>Acciones</th>
                               </tr>
                             </thead>
                             <tbody class="table-group-divider">
@@ -26,23 +26,12 @@
                                 <td class="align-middle">Apellido</td>
                                 <td class="align-middle">Correo</td>
                                 <td class="align-middle">Rut</td>
-                                <td class="align-middle"><a class="btn btn-sm btn-warning pb-0 text-white"><span class="material-icons">download</span></td>
-                                <td class="align-middle">
-                                    <div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" id="est-rechazado" name="estado" value="Rechazado">
-                                            <label class="form-check-label" for="est-rechazado">Rechazado</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" id="est-aceptado" name="estado" value="Aceptado">
-                                            <label class="form-check-label" for="est-aceptado">Aceptado</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" id="est-revision" name="estadp" value="En-Revision">
-                                            <label class="form-check-label" for="est-revision">En revision</label>
-                                        </div>
-                                        
+                                <td>
+                                    <label for="comentarios" class="form-label">Ingresa comentarios</label>
+                                    <textarea name="comnetarios" id="comentarios" cols="30" rows="5" class="form-control"></textarea>
                                 </td>
+                                <td class="align-middle"><a class="btn btn-sm btn-warning pb-0 text-white"><span class="material-icons">download</span></td>
+                                
                               </tr>
                             </tbody>
                           </table>

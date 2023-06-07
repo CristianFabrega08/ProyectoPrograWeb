@@ -17,7 +17,8 @@
                                     <th scope="col">Rut</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Apellido</th>
-                                    <th colspan="2">Acciones</th>
+                                    <th scope="col">Estado Propuesta</th>
+                                    <th scope="col">Acciones</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -26,6 +27,21 @@
                                     <td>Rut</td>
                                     <td>nombre</td>
                                     <td>Apellido</td>
+                                    <td class="align-middle">
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" class="form-check-input" id="est-rechazado" name="estado" value="Rechazado">
+                                                <label class="form-check-label" for="est-rechazado">Rechazado</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" class="form-check-input" id="est-aceptado" name="estado" value="Aceptado">
+                                                <label class="form-check-label" for="est-aceptado">Aceptado</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" class="form-check-input" id="est-revision" name="estadp" value="En-Revision">
+                                                <label class="form-check-label" for="est-revision">En revision</label>
+                                            </div>
+                                    </td>
                                     <td>
                                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar nombre">
                                             <button type="button" class="btn btn-sm btn-danger">
