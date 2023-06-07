@@ -29,5 +29,6 @@ route::post('/Profesor',[ProfesorController::class,'store'])->name('Profesor.sto
 
 Route::get('/Administrador', [AdministradorController::class,'Administrador'])->name('Administrador.Inicio');
 route::post('/Administrador',[AdministradorController::class,'store'])->name('Administrador.store');
+Route::delete('/Administrador/{Estudiantes}',[AdministradorController::class,'destroy'])->name('Administrador.destroy');
 
 

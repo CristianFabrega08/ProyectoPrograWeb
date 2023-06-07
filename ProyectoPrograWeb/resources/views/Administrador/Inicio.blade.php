@@ -27,11 +27,7 @@
                                             <td>{{$estudiante->apellido}}</td>
                                             <td>{{$estudiante->email}}</td>
                                             <td>
-                                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar nombre">
-                                                    <button type="button" class="btn btn-sm btn-danger">
-                                                        <span class="material-icons text-black">delete</span>
-                                                    </button>
-                                                </span>
+                                                
                                             </td>
                                             <td>
                                                 <span>
@@ -151,6 +147,59 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <div class="card mt-5">
+                            <div class="card-header">
+                                <h3>Propuestas</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Rut</th>
+                                            <th scope="col">Propuesta</th>
+                                            <th scope="col">Estado de propuesta</th>
+                                            
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                           @foreach($Estudiantes as $index => $estudiante)
+                                                <tr>
+                                                    <th>{{$estudiante->rut}}</th>
+                                                    <td>pdf</td>
+                                                    <td>
+                                                        <div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input type="radio" class="form-check-input" id="est-rechazado" name="estado" value="Rechazado">
+                                                                <label class="form-check-label" for="est-rechazado">Rechazado</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input type="radio" class="form-check-input" id="est-aceptado" name="estado" value="Aceptado">
+                                                                <label class="form-check-label" for="est-aceptado">Aceptado</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input type="radio" class="form-check-input" id="est-revision" name="estadp" value="En-Revision">
+                                                                <label class="form-check-label" for="est-revision">En revision</label>
+                                                            </div>
+                                                        </div>   
+                                                    </td>
+                                                    
+                                                </tr>
+                                           @endforeach 
+                                          
+                                          
+                                        </tbody>
+                                      </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
         </div>
     </div>

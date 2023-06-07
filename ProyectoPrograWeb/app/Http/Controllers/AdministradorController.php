@@ -24,4 +24,9 @@ class AdministradorController extends Controller
         $Estudiante->save();
         return redirect()->route('Administrador.Inicio');
     }
+
+    public function destroy(estudiante $Estudiantes){
+        $Estudiantes->delete();
+        return redirect()->route('Administrador.Inicio');
+    }
 }
