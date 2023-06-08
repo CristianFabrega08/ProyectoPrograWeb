@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('fecha');
             $table->text('comentario');
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('propuesta_id')->references('id')->on('propuestas');
             $table->foreign('profesor_rut')->references('rut')->on('profesores');
         });

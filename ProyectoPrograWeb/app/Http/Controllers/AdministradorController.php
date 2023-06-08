@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\estudiante;
 use App\models\profesor;
+use App\Models\propuestas;
 use Illuminate\Support\Facades\Storage;
 
 class AdministradorController extends Controller
@@ -12,7 +13,8 @@ class AdministradorController extends Controller
     public function Administrador(){
         $Profesores = profesor::all();
         $Estudiantes = estudiante::all();
-        return view('Administrador.Inicio', compact('Estudiantes','Profesores'));
+        $Propuestas = propuestas::all();
+        return view('Administrador.Inicio', compact('Estudiantes','Profesores','Propuestas'));
     }
 
 
@@ -25,7 +27,12 @@ class AdministradorController extends Controller
         $Estudiante->save();
         return redirect()->route('Administrador.Inicio');
     }
-
+    
+    public function update(propuestas $Propuestas, Request $request){
+        $Propuestas->estado = $request->estado;
+        $Propuestas->save();
+        return redirect()->route('Administrador.Inicio');
+    }
 
     
 }

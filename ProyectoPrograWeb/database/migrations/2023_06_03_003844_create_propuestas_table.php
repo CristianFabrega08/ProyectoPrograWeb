@@ -19,14 +19,14 @@ return new class extends Migration
             $table->tinyinteger('estado')->default(1);
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('estudiante_rut')->references('rut')->on('estudiantes');
+            $table->foreign('estudiante_rut')->references('rut')->on('Estudiantes');
         });
     }
 
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('propuestas');
     }

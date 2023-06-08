@@ -26,16 +26,6 @@
                                             <td>{{$estudiante->nombre}}</td>
                                             <td>{{$estudiante->apellido}}</td>
                                             <td>{{$estudiante->email}}</td>
-                                            <td>
-                                                
-                                            </td>
-                                            <td>
-                                                <span>
-                                                    <a href="{{route('Administrador.EditAlumno',$estudiante->rut)}}" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" title="Actualizar">
-                                                        <span class="material-icons">edit</span>
-                                                    </a>
-                                                </span>
-                                            </td>
                                         </tr>
                                   </tbody> 
                                 @endforeach
@@ -57,8 +47,7 @@
                                   <tr>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Apellido</th>
-                                    <th scope="col">Rut</th>
-                                    <th colspan="2">Acciones</th>
+                                    <th scope="col">Rut</th>    
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -68,20 +57,6 @@
                                             <td>{{$profesor->nombre}}</td>
                                             <td>{{$profesor->apellido}}</td>
                                             <td>{{$profesor->rut}}</td>
-                                            <td>
-                                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar nombre">
-                                                    <button type="button" class="btn btn-sm btn-danger">
-                                                    <span class="material-icons text-black">delete</span>
-                                                    </button>
-                                                </span>
-                                            </td>
-                                            <td>
-                                            <span>
-                                                <a href="{{route('Administrador.EditProfesor',$profesor->rut)}}" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" title="Actualizar">
-                                                    <span class="material-icons">edit</span>
-                                                </a>
-                                            </span>
-                                            </td>
                                         </tr>
                                     @endforeach
                                     
@@ -156,45 +131,46 @@
                                 <h3>Propuestas</h3>
                             </div>
                             <div class="card-body">
-                                <form action="">
-                                    <table class="table">
+                                <table class="table">
                                         <thead>
                                           <tr>
                                             <th scope="col">Rut</th>
                                             <th scope="col">Propuesta</th>
                                             <th scope="col">Estado de propuesta</th>
-                                            
                                           </tr>
                                         </thead>
-                                        <tbody>
-                                           @foreach($Estudiantes as $index => $estudiante)
+                                    <form method="POST" action="{{route('Administrador.update')}}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('put')
+                                            <tbody>
+                                            @foreach($Propuestas as $index => $propuesta)
                                                 <tr>
-                                                    <th>{{$estudiante->rut}}</th>
+                                                    <th>{{$propuesta->estudiante_rut}}</th>
                                                     <td>pdf</td>
                                                     <td>
                                                         <div>
                                                             <div class="form-check form-check-inline">
-                                                                <input type="radio" class="form-check-input" id="est-rechazado" name="estado" value="Rechazado">
-                                                                <label class="form-check-label" for="est-rechazado">Rechazado</label>
+                                                                <input type="radio" class="form-check-input" id="estado-3" name="estado" value="3" @if($propuesta->estado==3) checked @endif>
+                                                                <label class="form-check-label" for="estado-1">Aceptado</label>
                                                             </div>
                                                             <div class="form-check form-check-inline">
-                                                                <input type="radio" class="form-check-input" id="est-aceptado" name="estado" value="Aceptado">
-                                                                <label class="form-check-label" for="est-aceptado">Aceptado</label>
+                                                                <input type="radio" class="form-check-input" id="estado-2" name="estado" value="2" @if($propuesta->estado==2) checked @endif>
+                                                                <label class="form-check-label" for="estado-2">rechazado</label>
                                                             </div>
                                                             <div class="form-check form-check-inline">
-                                                                <input type="radio" class="form-check-input" id="est-revision" name="estadp" value="En-Revision">
-                                                                <label class="form-check-label" for="est-revision">En revision</label>
+                                                                <input type="radio" class="form-check-input" id="estado-1" name="estado" value="1" @if($propuesta->estado==1) checked @endif>
+                                                                <label class="form-check-label" for="estado-1">en revision</label>
                                                             </div>
                                                         </div>   
                                                     </td>
-                                                    
+                                                    <td>
+                                                        <button type ="submit" class="btn btn-success">Editar Equipo</button>   
+                                                    </td>
                                                 </tr>
-                                           @endforeach 
-                                          
-                                          
-                                        </tbody>
-                                      </table>
-                                </form>
+                                            @endforeach 
+                                            </tbody>
+                                     </form>
+                                </table>
                             </div>
                         </div>
                     </div>
