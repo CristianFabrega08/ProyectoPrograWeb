@@ -15,6 +15,7 @@ class AdministradorController extends Controller
         return view('Administrador.Inicio', compact('Estudiantes','Profesores'));
     }
 
+
     public function store(Request $request){
         $Estudiante = new estudiante();
         $Estudiante->rut = $request->rut;
@@ -25,8 +26,6 @@ class AdministradorController extends Controller
         return redirect()->route('Administrador.Inicio');
     }
 
-    public function destroy(estudiante $Estudiantes){
-        $Estudiantes->delete();
-        return redirect()->route('Administrador.Inicio');
-    }
+
+    
 }

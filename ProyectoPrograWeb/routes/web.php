@@ -29,6 +29,8 @@ route::post('/Profesor',[ProfesorController::class,'store'])->name('Profesor.sto
 
 Route::get('/Administrador', [AdministradorController::class,'Administrador'])->name('Administrador.Inicio');
 route::post('/Administrador',[AdministradorController::class,'store'])->name('Administrador.store');
-Route::delete('/Administrador/{Estudiantes}',[AdministradorController::class,'destroy'])->name('Administrador.destroy');
+Route::get('/Administrador/{Profesor}/EditProfesor',[ProfesorController::class,'edit'])->name('Administrador.EditProfesor');
+Route::get('/Administrador/{estudiante}/EditAlumno',[EstudianteController::class,'edit'])->name('Administrador.EditAlumno');
+Route::put('/Administrador/{estudiante}',[Estudiantecontroller::class,'update'])->name('estudiante.update');
 
 

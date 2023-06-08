@@ -15,6 +15,9 @@ class EstudianteController extends Controller
         $Propuestas = propuestas::all();
         return view('Estudiante.inicio',compact('Estudiantes','Propuestas'));
     }
+
+
+    
     public function store(Request $request){
         $estudiante = new estudiante();
         $estudiante->rut = $request->rut;
@@ -27,5 +30,19 @@ class EstudianteController extends Controller
         $propuesta->documento = $request->documento->store('public/documentos');
         $propuesta->save();
         return redirect()->route('Estudiante.inicio');
+    }
+
+    public function edit(Estudiante $estudiante){
+        $Estudiantes= estudiante::all();
+        return view('Administrador.EditAlumno',compact('estudiante'));
+    }
+
+    public function update(Estudiante $estudiante, Request $request){
+        $estudiante->nombre = $request->nombre;
+        $estudiante->apellido = $request->apellido;
+        $estudiante->email = $request->email;
+        
+        $estudiante->save();
+        return redirect()->route('Administrador.Inicio');
     }
 }

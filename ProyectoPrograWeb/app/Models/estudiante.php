@@ -10,4 +10,5 @@ class estudiante extends Model
 {
     use HasFactory,softDeletes;
     protected $table = 'Estudiantes';
+    protected $primaryKey = 'rut';
 }

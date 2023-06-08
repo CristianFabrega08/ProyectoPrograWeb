@@ -31,7 +31,7 @@
                                             </td>
                                             <td>
                                                 <span>
-                                                    <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" title="Actualizar">
+                                                    <a href="{{route('Administrador.EditAlumno',$estudiante->rut)}}" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" title="Actualizar">
                                                         <span class="material-icons">edit</span>
                                                     </a>
                                                 </span>
@@ -77,7 +77,7 @@
                                             </td>
                                             <td>
                                             <span>
-                                                <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" title="Actualizar">
+                                                <a href="{{route('Administrador.EditProfesor',$profesor->rut)}}" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" title="Actualizar">
                                                     <span class="material-icons">edit</span>
                                                 </a>
                                             </span>

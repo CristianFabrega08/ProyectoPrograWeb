@@ -7,7 +7,7 @@
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card mt-5">
                 <div class="card-header">
-                    <h3 style="text-align: center">Ingresar Profesores</h3>
+                    <h3 style="text-align: center">Editar nombre </h3>
                 </div>
                 <div class="card-body">
                     <form action="">
@@ -30,3 +30,4 @@
         </div>
     </div>
 </div>
+@endsection

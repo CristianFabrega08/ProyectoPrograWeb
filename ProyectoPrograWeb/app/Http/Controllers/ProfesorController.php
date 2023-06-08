@@ -20,4 +20,9 @@ class ProfesorController extends Controller
         $Profesor->save();
         return redirect()->route('Administrador.Inicio');
     }
+
+    public function edit(Profesor $profesor){
+        $Profesores = profesor::all();
+        return view('Administrador.EditProfesor',compact('profesor'));
+    }
 }
