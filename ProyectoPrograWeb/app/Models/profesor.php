@@ -10,4 +10,5 @@ class profesor extends Model
 {
     use HasFactory,softDeletes;
     protected $table = 'Profesores';
+    protected $primaryKey = 'rut';
 }

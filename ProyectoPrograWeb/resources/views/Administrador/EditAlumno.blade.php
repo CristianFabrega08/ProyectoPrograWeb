@@ -14,9 +14,7 @@
                         @csrf
                         @method('put')
                         <div class="mb-3">
-                            <label for="rut" class="form-label">Rut actual: {{$estudiante->rut}} </label>
-                            <input type="text" id="rut" name="rut" class="form-control">
-                        </div>
+                            <label for="rut" class="form-label">Rut del alumno: {{$estudiante->rut}} </label>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre actual: {{$estudiante->nombre}}</label>
                             <input type="text" name="nombre" id="nombre" class="form-control">

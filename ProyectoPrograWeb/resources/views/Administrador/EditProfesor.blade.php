@@ -10,14 +10,16 @@
                     <h3 style="text-align: center">Editar nombre </h3>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form method="POST" action="{{route('Profesor.update',$profesor->rut)}}">
+                        @csrf
+                        @method('put')
                         <div class="mb-3">
-                            <label for="nom-profe" class="form-label">Nombre</label>
-                            <input type="text" id="nom-profe" name="nom-profe" class="form-control">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="apellido-profe" class="form-label">Apellido</label>
-                            <input type="text" name="apellido-profe" id="apellido-profe" class="form-control">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" name="apellido" id="apellido" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="rut-profe" class="form-label">Rut</label>

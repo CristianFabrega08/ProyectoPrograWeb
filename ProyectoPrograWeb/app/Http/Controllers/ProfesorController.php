@@ -13,16 +13,23 @@ class ProfesorController extends Controller
         return view('Profesor.Inicio',compact('Profesores'));
     }
     public function store(Request $request){
-        $Profesor = new profesor();
-        $Profesor->rut = $request->rut;
-        $Profesor->nombre = $request->nombre;
-        $Profesor->apellido = $request->apellido;
-        $Profesor->save();
+        $profesor = new profesor();
+        $profesor->rut = $request->rut;
+        $profesor->nombre = $request->nombre;
+        $profesor->apellido = $request->apellido;
+        $profesor->save();
         return redirect()->route('Administrador.Inicio');
     }
 
     public function edit(Profesor $profesor){
         $Profesores = profesor::all();
         return view('Administrador.EditProfesor',compact('profesor'));
+    }
+
+    public function update(Profesor $profesor, Request $request){
+        $profesor->nombre = $request->nombre;
+        $profesor->apellido = $request->apellido;
+        $profesor->save();
+        return redirect()->route('Administrador.Inicio');
     }
 }

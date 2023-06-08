@@ -29,8 +29,10 @@ route::post('/Profesor',[ProfesorController::class,'store'])->name('Profesor.sto
 
 Route::get('/Administrador', [AdministradorController::class,'Administrador'])->name('Administrador.Inicio');
 route::post('/Administrador',[AdministradorController::class,'store'])->name('Administrador.store');
-Route::get('/Administrador/{Profesor}/EditProfesor',[ProfesorController::class,'edit'])->name('Administrador.EditProfesor');
+Route::get('/Administrador/{profesor}/EditProfesor',[ProfesorController::class,'edit'])->name('Administrador.EditProfesor');
+Route::put('/Administrador/{profesor}',[ProfesorController::class,'update'])->name('Profesor.update');
 Route::get('/Administrador/{estudiante}/EditAlumno',[EstudianteController::class,'edit'])->name('Administrador.EditAlumno');
 Route::put('/Administrador/{estudiante}',[Estudiantecontroller::class,'update'])->name('estudiante.update');
+
 
 
