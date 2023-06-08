@@ -146,7 +146,7 @@
                                             @foreach($Propuestas as $index => $propuesta)
                                                 <tr>
                                                     <th>{{$propuesta->estudiante_rut}}</th>
-                                                    <td>pdf</td>
+                                                    <td>{{$propuesta->documento}}</td>
                                                     <td>
                                                         <div>
                                                             <div class="form-check form-check-inline">

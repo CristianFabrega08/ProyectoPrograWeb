@@ -34,5 +34,9 @@ class AdministradorController extends Controller
         return redirect()->route('Administrador.Inicio');
     }
 
+    public function propuesta(){
+        $Propuestas = propuestas::all();
+        return view('Administrador.propuesta', compact('Propuestas'));
+    }
     
 }

@@ -20,6 +20,7 @@ use App\Http\Controllers\ProfesorController;
 Route::get('/', function () {
     return view('home.Inicio');
 });
+Route::get('/propuesta',[AdministradorController::class, 'propuesta'])->name('Administrador.propuesta');
 Route::get('/',[Homecontroller::class, 'index'])->name('home.Inicio');
 Route::get('/Estudiante', [Estudiantecontroller::class, 'Estudiante'])->name('Estudiante.inicio');
 Route::post('/Estudiante',[Estudiantecontroller::class,'store'])->name('Estudiante.store');
