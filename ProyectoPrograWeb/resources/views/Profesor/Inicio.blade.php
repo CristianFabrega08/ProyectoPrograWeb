@@ -12,20 +12,19 @@
                         <table class="table table-striped table-hover">
                             <thead>
                               <tr>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido</th>
-                                <th scope="col">Correo</th>
-                                <th scope="col">Rut</th>
+                                <th scope="col">#</th>
+                                <th scope="col">rut de profesor designado</th>
+                                <th scope="col">Fecha</th>
                                 <th scope="col">Comentarios</th>
                                 <th>Acciones</th>
                               </tr>
                             </thead>
+                            @foreach($PropuestaProfesor as $index => $propuesta)
                             <tbody class="table-group-divider">
                               <tr>
-                                <td class="align-middle">Nombre 1</td>
-                                <td class="align-middle">Apellido</td>
-                                <td class="align-middle">Correo</td>
-                                <td class="align-middle">Rut</td>
+                                <td class="align-middle">{{$propuesta->propuesta_id}}</td>
+                                <td class="align-middle">{{$propuesta->profesor_rut}}</td>
+                                <td class="align-middle">{{$propuesta->fecha}}</td>
                                 <td>
                                     <label for="comentarios" class="form-label">Ingresa comentarios</label>
                                     <textarea name="comnetarios" id="comentarios" cols="30" rows="5" class="form-control"></textarea>
@@ -34,6 +33,8 @@
                                 
                               </tr>
                             </tbody>
+                            @endforeach
+                            
                           </table>
                     </div>
                 </div>

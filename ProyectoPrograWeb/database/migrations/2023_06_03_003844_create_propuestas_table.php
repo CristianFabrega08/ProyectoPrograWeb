@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('propuestas', function (Blueprint $table) {
             $table->string('estudiante_rut',10);
             $table->Integer('id')->autoIncrement()->from(1);
-            $table->timestamp('Fecha')->useCurrent();
+            $table->date('Fecha');
             $table->string('documento',100);
             $table->tinyinteger('estado')->default(1);
             $table->timestamps();

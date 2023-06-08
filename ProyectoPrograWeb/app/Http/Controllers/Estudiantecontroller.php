@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\estudiante;
 use App\Models\propuestas;
 use App\Models\PropuestaProfesor;
+use App\models\profesor;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -15,7 +16,8 @@ class EstudianteController extends Controller
         $Estudiantes = estudiante::all();
         $Propuestas = propuestas::all();
         $PropuestaProfesor = PropuestaProfesor::all();
-        return view('Estudiante.inicio',compact('Estudiantes','Propuestas','PropuestaProfesor'));
+        $profesores = profesor::all();
+        return view('Estudiante.inicio',compact('Estudiantes','Propuestas','PropuestaProfesor','profesores'));
     }
 
 
@@ -24,7 +26,14 @@ class EstudianteController extends Controller
         $propuesta = new propuestas();
         $propuesta->estudiante_rut = $request->estudiante_rut;
         $propuesta->documento = $request->documento->store('public/documentos');   
+        $propuesta->Fecha = $request->Fecha;
         $propuesta->save();
+        $propuestaprofe = new PropuestaProfesor();
+        $propuestaprofe->propuesta_id = $propuesta->id;
+        $propuestaprofe->profesor_rut = $request->profesor_rut;
+        $propuestaprofe->fecha = $propuesta->Fecha;
+        $propuestaprofe->comentario = (' ');
+        $propuestaprofe->save();
         return redirect()->route('Estudiante.inicio');
     }
 

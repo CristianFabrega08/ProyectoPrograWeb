@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\profesor;
+use App\Models\PropuestaProfesor;
 use Illuminate\Support\Facades\Storage;
 
 class ProfesorController extends Controller
 {
     public function Profesor(){
         $Profesores = profesor::all();
-        return view('Profesor.Inicio',compact('Profesores'));
+        $PropuestaProfesor = PropuestaProfesor::all();
+        return view('Profesor.Inicio',compact('Profesores','PropuestaProfesor'));
     }
     public function store(Request $request){
         $profesor = new profesor();

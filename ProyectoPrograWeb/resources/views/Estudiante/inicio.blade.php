@@ -7,16 +7,25 @@
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="card mt-2">
             <div class="card-header mt-2">
-                <h3 style="text-align: center">Ingresa tu Rut</h3>
+                <h3 style="text-align: center">Ingrese datos</h3>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{route('Estudiante.store')}}" enctype="multipart/form-data">
                   @csrf
+                    <label for="">Ingrese su rut</label>
                     <select name="estudiante_rut" id="estudiante_rut" class="form-control">
                       @foreach ($Estudiantes as $index => $estudiantes)
                         <option value="{{$estudiantes->rut}}">{{$estudiantes->rut}}</option>
                       @endforeach
                     </select>
+                    <label for="">Ingrese el rut del profesor</label>
+                    <select name="profesor_rut" id="profesor_rut" class="form-control">
+                      @foreach ($profesores as $index => $profesor)
+                        <option value="{{$profesor->rut}}">{{$profesor->rut}}</option>
+                      @endforeach
+                    </select>
+                    <label>Seleccione la fecha de subida</label>
+                    <input type="date" id="Fecha" name="Fecha" value="2023-06-09" min="2002-01-01" max="2050-12-31">
                     <h5 class="my-3">Sube el archivo en formato PDF</h5>
                     <small>El archivo debe tener el nombre de la propuesta y de que trata</small>
                     <div class="form-group">
