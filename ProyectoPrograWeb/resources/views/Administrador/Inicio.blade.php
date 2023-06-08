@@ -110,7 +110,7 @@
                                     <input type="text" name="nombre" id="nombre" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="apellido" class="form-label">Rut</label>
+                                    <label for="apellido" class="form-label">Apellido</label>
                                     <input type="text" name="apellido" id="apellido" class="form-control">
                                 </div>
                                 <button type ="submit" class="btn btn-success mt-4">Agregar Profesor</button>

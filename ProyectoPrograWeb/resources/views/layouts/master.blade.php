@@ -15,7 +15,7 @@
           <form class="d-flex">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Logo_UTFSM.png" style="width: 100px" class="d-flex" alt="">
           </form>
-          <a class="navbar-brand text-white" href="#">TSI</a>
+          <a class="navbar-brand text-white" href="{{route('home.Inicio')}}">TSI</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
