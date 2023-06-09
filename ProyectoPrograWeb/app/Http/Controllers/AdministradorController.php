@@ -28,11 +28,7 @@ class AdministradorController extends Controller
         return redirect()->route('Administrador.Inicio');
     }
     
-    public function update(propuestas $Propuestas, Request $request){
-        $Propuestas->estado = $request->estado;
-        $Propuestas->save();
-        return redirect()->route('Administrador.Inicio');
-    }
+
 
     public function propuesta(){
         $Propuestas = propuestas::all();

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\ProfesorController;
+use App\Http\Controllers\PropuestasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,4 @@ route::post('/Profesor',[ProfesorController::class,'store'])->name('Profesor.sto
 
 Route::get('/Administrador', [AdministradorController::class,'Administrador'])->name('Administrador.Inicio');
 route::post('/Administrador',[AdministradorController::class,'store'])->name('Administrador.store');
-Route::put('/Administrador',[AdministradorController::class,'update'])->name('Administrador.update');
+Route::put('/Propuestas',[PropuestasController::class,'update'])->name('Propuestas.update');

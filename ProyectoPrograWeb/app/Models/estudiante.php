@@ -11,4 +11,8 @@ class estudiante extends Model
     use HasFactory,softDeletes;
     protected $table = 'Estudiantes';
     protected $primaryKey = 'rut';
+
+    public function propuestas(){
+        return $this->hasMany('App\Models\propuestas');
+    }
 }

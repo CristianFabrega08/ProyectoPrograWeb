@@ -10,4 +10,9 @@ class propuestas extends Model
 {
     use HasFactory,softDeletes;
     protected $table = 'Propuestas';
+    protected $foreignKey = 'estudiante_rut';
+
+    public function estudiante(){
+        return $this->belongsTo('App\Models\estudiante');
+    }
 }

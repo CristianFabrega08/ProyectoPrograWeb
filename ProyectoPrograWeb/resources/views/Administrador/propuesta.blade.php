@@ -19,11 +19,11 @@
                                     <th scope="col">Estado de propuesta</th>
                                   </tr>
                                 </thead>
-                            <form method="POST" action="{{route('Administrador.update')}}" enctype="multipart/form-data">
+                            <form method="POST" action="{{route('Propuestas.update')}}" enctype="multipart/form-data">
                                 @csrf
                                 @method('put')
                                     <tbody>
-                                    @foreach($Propuestas as $index => $propuesta)
+                                        @foreach($Propuestas as $index => $propuesta)
                                         <tr>
                                             <th>{{$propuesta->estudiante_rut}}</th>
                                             <td>{{$propuesta->documento}}</td>
@@ -47,7 +47,7 @@
                                                 <button type ="submit" class="btn btn-success">Subir</button>   
                                             </td>
                                         </tr>
-                                    @endforeach 
+                                         @endforeach 
                                     </tbody>
                              </form>
                         </table>

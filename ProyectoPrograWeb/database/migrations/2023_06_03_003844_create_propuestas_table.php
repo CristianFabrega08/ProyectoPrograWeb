@@ -12,10 +12,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('propuestas', function (Blueprint $table) {
-            $table->string('estudiante_rut',10);
+            $table->string('estudiante_rut',10)->nullable();
             $table->Integer('id')->autoIncrement()->from(1);
-            $table->date('Fecha');
-            $table->string('documento',100);
+            $table->date('Fecha')->nullable();
+            $table->string('documento',100)->nullable();
             $table->tinyinteger('estado')->default(1);
             $table->timestamps();
             $table->softDeletes();
