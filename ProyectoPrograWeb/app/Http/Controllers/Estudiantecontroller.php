@@ -21,7 +21,6 @@ class EstudianteController extends Controller
     }
 
 
-    
     public function store(Request $request){
         $propuesta = new propuestas();
         $propuesta->estudiante_rut = $request->estudiante_rut;
